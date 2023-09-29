@@ -27,6 +27,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_29_121954) do
     t.datetime "deleted_at"
     t.index ["author_id"], name: "index_articles_on_author_id"
     t.index ["category_id"], name: "index_articles_on_category_id"
+    t.index ["deleted_at"], name: "index_articles_on_deleted_at"
     t.index ["tag_id"], name: "index_articles_on_tag_id"
   end
 

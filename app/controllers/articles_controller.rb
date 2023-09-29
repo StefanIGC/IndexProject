@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: %i[ show update destroy ]
+  before_action :authenticate_user!, only: %i[ show ]
 
   # GET /articles
   def index
@@ -19,6 +20,7 @@ class ArticlesController < ApplicationController
   # POST /articles
   def create
     @article = Article.new(article_params)
+    authorize! :create, @article
 
     if @article.save
       render json: @article, status: :created, location: @article
@@ -29,6 +31,7 @@ class ArticlesController < ApplicationController
 
   # PATCH/PUT /articles/1
   def update
+    authorize! :update, @article
     if @article.update(article_params)
       render json: @article
     else
@@ -38,6 +41,7 @@ class ArticlesController < ApplicationController
 
   # DELETE /articles/1
   def destroy
+    authorize! :destroy, @article
     @article.update(deleted_at: Time.current)
     render json: { article: 'Deleted!' }
   end

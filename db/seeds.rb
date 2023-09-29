@@ -1,8 +1,8 @@
-Article.delete_all
-Comment.delete_all
-User.delete_all
-Category.delete_all
-Tag.delete_all
+# Article.delete_all
+# Comment.delete_all
+# User.delete_all
+# Category.delete_all
+# Tag.delete_all
 
 
 
