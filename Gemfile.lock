@@ -66,6 +66,9 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
+    acts_as_paranoid (0.8.1)
+      activerecord (>= 5.2, < 7.1)
+      activesupport (>= 5.2, < 7.1)
     bcrypt (3.1.19)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
@@ -134,6 +137,8 @@ GEM
     nokogiri (1.15.4-arm64-darwin)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    paranoia (2.6.2)
+      activerecord (>= 5.1, < 7.1)
     pg (1.5.4)
     psych (5.1.0)
       stringio
@@ -202,12 +207,14 @@ PLATFORMS
   arm64-darwin-22
 
 DEPENDENCIES
+  acts_as_paranoid
   bootsnap
   debug
   devise
   devise-jwt
   faker
   jsonapi-serializer
+  paranoia
   pg (~> 1.1)
   puma (~> 5.0)
   rack-cors

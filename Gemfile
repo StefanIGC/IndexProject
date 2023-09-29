@@ -51,3 +51,5 @@ gem 'devise-jwt'
 gem 'jsonapi-serializer'
 
 gem 'faker'
+gem 'acts_as_paranoid'
+gem 'paranoia'

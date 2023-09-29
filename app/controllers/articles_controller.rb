@@ -3,14 +3,17 @@ class ArticlesController < ApplicationController
 
   # GET /articles
   def index
-    @articles = Article.all
-
+    @articles = Article.where(deleted_at: nil)
     render json: @articles
   end
 
   # GET /articles/1
   def show
-    render json: @article
+    if @article.deleted_at.nil?
+      render json: @article.to_json(include: [:comments])
+    else
+      render json: { error: 'Article not found' }, status: :not_found
+    end
   end
 
   # POST /articles
@@ -35,7 +38,8 @@ class ArticlesController < ApplicationController
 
   # DELETE /articles/1
   def destroy
-    @article.destroy
+    @article.update(deleted_at: Time.current)
+    render json: { article: 'Deleted!' }
   end
 
   private
