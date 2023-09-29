@@ -36,7 +36,8 @@ end
     description: Faker::Lorem.paragraph,
     category_id: Category.all.sample.id,
     tag_id: Tag.all.sample.id,
-    author_id: User.all.sample.id
+    author_id: User.all.sample.id,
+    published: [true, false].sample
   )
 end
 

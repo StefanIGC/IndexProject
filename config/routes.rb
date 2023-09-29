@@ -1,8 +1,4 @@
-Rails.application.routes.draw do
-  resources :comments
-  resources :articles
-  resources :categories
-  resources :tags
+
   Rails.application.routes.draw do
   resources :comments
   resources :articles
@@ -17,7 +13,6 @@ Rails.application.routes.draw do
       sessions: 'users/sessions',
       registrations: 'users/registrations'
     }
-  end
 
   root 'home#index'
 end
