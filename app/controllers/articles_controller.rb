@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: %i[ show update destroy ]
-  before_action :authenticate_user!, only: %i[ show ]
+  before_action :set_article, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /articles
   def index
@@ -19,19 +19,24 @@ class ArticlesController < ApplicationController
 
   # POST /articles
   def create
-    @article = Article.new(article_params)
-    authorize! :create, @article
+    article = current_user.articles.new(article_params)
 
-    if @article.save
-      render json: @article, status: :created, location: @article
+    if article.save
+      render json: article, status: :created, location: article
     else
-      render json: @article.errors, status: :unprocessable_entity
+      render json: article.errors, status: :unprocessable_entity
     end
   end
 
   # PATCH/PUT /articles/1
   def update
-    authorize! :update, @article
+    @article = Article.find(params[:id])
+
+    unless current_user == @article.author
+      render json: { error: 'You are not authorized to edit this article.' }, status: :unauthorized
+      return
+    end
+
     if @article.update(article_params)
       render json: @article
     else
@@ -41,7 +46,12 @@ class ArticlesController < ApplicationController
 
   # DELETE /articles/1
   def destroy
-    authorize! :destroy, @article
+    @article = Article.find(params[:id])
+    unless current_user == @article.author
+      render json: { error: 'You;re not authorized to delete this article!' }, status: :unauthorized
+      return
+    end
+
     @article.update(deleted_at: Time.current)
     render json: { article: 'Deleted!' }
   end

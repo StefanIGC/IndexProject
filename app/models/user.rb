@@ -12,7 +12,7 @@ class User < ApplicationRecord
          :jwt_authenticatable, jwt_revocation_strategy: self
 
 
-  def set_default_role
-    self.role ||= :user
-  end
+        def set_default_role
+          self.role ||= :user
+        end
 end

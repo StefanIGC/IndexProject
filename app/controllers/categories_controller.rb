@@ -1,12 +1,18 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: %i[ show update destroy ]
+  before_action :authenticate_user!
 
   # GET /categories
-  def index
-    @categories = Category.all
+  # def index
+  #   @categories = Category.all
+  #   render json: @categories
+  # end
 
-    render json: @categories
+  def index
+    categorys = Category.all
+    render json: CategorySerializer.new(categorys).serializable_hash[:data].map { |item| item[:attributes] }
   end
+
 
   # GET /categories/1
   def show

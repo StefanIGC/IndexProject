@@ -6,20 +6,17 @@ class CommentsController < ApplicationController
   # GET /comments
   def index
     @comments = Comment.all
-    authorize! :read, @comments
     render json: @comments
   end
 
   # GET /comments/1
   def show
-    authorize! :read, @comments
     render json: @comment
   end
 
   # POST /comments
   def create
-    @comment = Comment.new(comment_params)
-    authorize! :create, @comments
+    @comment = current_user.comments.new(comment_params)
     if @comment.save
       render json: @comment, status: :created, location: @comment
     else
@@ -29,7 +26,13 @@ class CommentsController < ApplicationController
 
   # PATCH/PUT /comments/1
   def update
-    authorize! :create, @comments
+    # @comment = Comment.find(params[:id])
+
+    unless current_user == @comment.user
+      render json: { error: 'You are not authorized to edit this article.' }, status: :unauthorized
+      return
+    end
+
     if @comment.update(comment_params)
       render json: @comment
     else
@@ -39,7 +42,11 @@ class CommentsController < ApplicationController
 
   # DELETE /comments/1
   def destroy
-    authorize! :destroy, @comments
+    @article = Article.find(params[:id])
+    unless current_user == @article.author
+      render json: { error: 'You;re not authorized to delete this article!' }, status: :unauthorized
+      return
+    end
     @comment.destroy
   end
 
