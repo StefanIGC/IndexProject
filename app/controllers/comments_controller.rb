@@ -42,8 +42,8 @@ class CommentsController < ApplicationController
 
   # DELETE /comments/1
   def destroy
-    @article = Article.find(params[:id])
-    unless current_user == @article.author
+    @comment = Comment.find(params[:id])
+    unless current_user == @comment.user
       render json: { error: 'You;re not authorized to delete this article!' }, status: :unauthorized
       return
     end

@@ -1,0 +1,102 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Authentification",
+    "dateExported": "2023-10-02T13:19:52.481Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "ccfac8cc-3ba0-4806-9887-f49aabe0c0df",
+            "colId": "54837bdd-e104-43d0-9cf5-5f2961bd80a6",
+            "containerId": "",
+            "name": "http://127.0.0.1:3000/api/auth/signup",
+            "url": "http://127.0.0.1:3000/api/auth/signup",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-10-02T11:47:42.743Z",
+            "modified": "2023-10-02T11:47:42.743Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"user\": {\n    \"email\":\"stefanchiciuc@gmail.admin\",\n    \"password\":\"useruser\",\n    \"first_name\":\"stefan\",\n    \"last_name\":\"chiciuc\",\n    \"role\": \"admin\"\n  }\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5f4658f8-ac3f-440f-9d17-68dc794f81b4",
+            "colId": "54837bdd-e104-43d0-9cf5-5f2961bd80a6",
+            "containerId": "",
+            "name": "http://127.0.0.1:3000/api/auth/login",
+            "url": "http://127.0.0.1:3000/api/auth/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-10-02T11:48:10.620Z",
+            "modified": "2023-10-02T11:48:10.620Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"user\": {\n    \"email\":\"stefanchiciuc@gmail.admin\",\n    \"password\":\"useruser\"\n  }\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2a8bd8b3-50f8-49aa-8b3a-b76792b6e7df",
+            "colId": "54837bdd-e104-43d0-9cf5-5f2961bd80a6",
+            "containerId": "",
+            "name": "Unban a User",
+            "url": "http://127.0.0.1:3000/user/unban/21",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-10-02T13:13:34.224Z",
+            "modified": "2023-10-02T13:13:34.224Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJmMWIwNmE4MS0wNTJiLTQ0NjctOTZkYi1iZjI1OTU5NzVlYzQiLCJzdWIiOiIyMiIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTY5NjI1MjM1OSwiZXhwIjoxNjk2MjU0MTU5fQ.Mnm1FWMCWXCy5hsYmkXXbA-8bIDqPCsbTwR4q_L44Vw"
+            },
+            "tests": []
+        },
+        {
+            "_id": "cf58a89f-322f-4f69-b568-7ab705887039",
+            "colId": "54837bdd-e104-43d0-9cf5-5f2961bd80a6",
+            "containerId": "",
+            "name": "Ban a user",
+            "url": "http://127.0.0.1:3000/user/ban/21",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-10-02T13:13:50.751Z",
+            "modified": "2023-10-02T13:13:50.751Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJmMWIwNmE4MS0wNTJiLTQ0NjctOTZkYi1iZjI1OTU5NzVlYzQiLCJzdWIiOiIyMiIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTY5NjI1MjM1OSwiZXhwIjoxNjk2MjU0MTU5fQ.Mnm1FWMCWXCy5hsYmkXXbA-8bIDqPCsbTwR4q_L44Vw"
+            },
+            "tests": []
+        },
+        {
+            "_id": "9102f9f2-d7ff-4e6f-be0a-d54c11cbe3f3",
+            "colId": "54837bdd-e104-43d0-9cf5-5f2961bd80a6",
+            "containerId": "",
+            "name": "LogOut",
+            "url": "http://127.0.0.1:3000/api/auth/logout",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-10-02T13:14:48.353Z",
+            "modified": "2023-10-02T13:14:48.353Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"user\": {\n    \"email\":\"stefanchiciuc@gmail.admin\",\n    \"password\":\"useruser\"\n  }\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

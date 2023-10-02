@@ -1,5 +1,8 @@
 
   Rails.application.routes.draw do
+    mount Rswag::Ui::Engine => '/api-docs'
+    mount Rswag::Api::Engine => '/api-docs'
+    
     post 'user/ban/:id', to: 'users#ban_user', as: 'admin_ban_user'
     post 'user/unban/:id', to: 'users#unban_user', as: 'admin_unban_user'
     get '/search', to: 'articles#search'

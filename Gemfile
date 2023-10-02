@@ -59,3 +59,6 @@ gem 'cancancan'
 gem 'solargraph', group: :development
 
 gem 'pg_search'
+
+gem 'rswag-api'
+gem 'rswag-ui'

@@ -3,14 +3,9 @@ class CategoriesController < ApplicationController
   before_action :authenticate_user!
 
   # GET /categories
-  # def index
-  #   @categories = Category.all
-  #   render json: @categories
-  # end
-
   def index
-    categorys = Category.all
-    render json: CategorySerializer.new(categorys).serializable_hash[:data].map { |item| item[:attributes] }
+    @categories = Category.all
+    render json: @categories
   end
 
 

@@ -1,0 +1,132 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Articles",
+    "dateExported": "2023-10-02T13:19:02.129Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "65c2018b-bd09-4b7e-b55c-765ac72c7973",
+            "colId": "fba4150d-2825-4a76-941c-fddf3744636f",
+            "containerId": "",
+            "name": "Get all Articles",
+            "url": "http://127.0.0.1:3000/articles",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-10-02T13:04:25.611Z",
+            "modified": "2023-10-02T13:04:25.611Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI0N2Y2OWQ0Mi1hM2M2LTQ5MGYtYTVjMi0yODlmMmIzZGViMDIiLCJzdWIiOiIyMSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTY5NjI1MTgzNywiZXhwIjoxNjk2MjUzNjM3fQ.mHua9UU7VisT3QYptAtdF5GEtDouOFpMAAcE5BTfy9g"
+            },
+            "tests": []
+        },
+        {
+            "_id": "76ef0026-b6a9-4d55-b6e0-5e01c5e7ddc1",
+            "colId": "fba4150d-2825-4a76-941c-fddf3744636f",
+            "containerId": "",
+            "name": "Get a article + comments",
+            "url": "http://127.0.0.1:3000/articles/3",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-10-02T13:04:50.598Z",
+            "modified": "2023-10-02T13:04:50.598Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI0N2Y2OWQ0Mi1hM2M2LTQ5MGYtYTVjMi0yODlmMmIzZGViMDIiLCJzdWIiOiIyMSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTY5NjI1MTgzNywiZXhwIjoxNjk2MjUzNjM3fQ.mHua9UU7VisT3QYptAtdF5GEtDouOFpMAAcE5BTfy9g"
+            },
+            "tests": []
+        },
+        {
+            "_id": "c4ff2773-85c8-439a-bc31-ebcd7902e629",
+            "colId": "fba4150d-2825-4a76-941c-fddf3744636f",
+            "containerId": "",
+            "name": "Create a article",
+            "url": "http://127.0.0.1:3000/articles",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-10-02T13:08:50.151Z",
+            "modified": "2023-10-02T13:08:50.151Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"article\": {\n    \"title\": \"Rem aut consequuntur harum.\",\n    \"description\": \"Praesentium corporis eum. Necessitatibus quia odio. Et rerum repellat.\",\n    \"image\": null,\n    \"category_id\": 5,\n    \"tag_id\": 8\n  }\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI0N2Y2OWQ0Mi1hM2M2LTQ5MGYtYTVjMi0yODlmMmIzZGViMDIiLCJzdWIiOiIyMSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTY5NjI1MTgzNywiZXhwIjoxNjk2MjUzNjM3fQ.mHua9UU7VisT3QYptAtdF5GEtDouOFpMAAcE5BTfy9g"
+            },
+            "tests": []
+        },
+        {
+            "_id": "085e60f0-0ae2-45b8-9569-a1b03ca86856",
+            "colId": "fba4150d-2825-4a76-941c-fddf3744636f",
+            "containerId": "",
+            "name": "Update Article",
+            "url": "http://127.0.0.1:3000/articles/42",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-10-02T13:11:15.654Z",
+            "modified": "2023-10-02T13:11:15.654Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"article\": {\n    \"title\": \"Updated Title\",\n    \"description\": \"Updated Description\",\n    \"image\": null,\n    \"category_id\": 5,\n    \"tag_id\": 8\n  }\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI0N2Y2OWQ0Mi1hM2M2LTQ5MGYtYTVjMi0yODlmMmIzZGViMDIiLCJzdWIiOiIyMSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTY5NjI1MTgzNywiZXhwIjoxNjk2MjUzNjM3fQ.mHua9UU7VisT3QYptAtdF5GEtDouOFpMAAcE5BTfy9g"
+            },
+            "tests": []
+        },
+        {
+            "_id": "90fa5a3a-ecd4-44fb-8690-e1776e41ee51",
+            "colId": "fba4150d-2825-4a76-941c-fddf3744636f",
+            "containerId": "",
+            "name": "Delete article",
+            "url": "http://127.0.0.1:3000/articles/4",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-10-02T13:11:50.500Z",
+            "modified": "2023-10-02T13:11:50.500Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI0N2Y2OWQ0Mi1hM2M2LTQ5MGYtYTVjMi0yODlmMmIzZGViMDIiLCJzdWIiOiIyMSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTY5NjI1MTgzNywiZXhwIjoxNjk2MjUzNjM3fQ.mHua9UU7VisT3QYptAtdF5GEtDouOFpMAAcE5BTfy9g"
+            },
+            "tests": []
+        },
+        {
+            "_id": "d37f259c-c5fc-4f68-8122-5fb66b6410e4",
+            "colId": "fba4150d-2825-4a76-941c-fddf3744636f",
+            "containerId": "",
+            "name": "Search in Articles",
+            "url": "http://127.0.0.1:3000/search",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-10-02T13:12:29.228Z",
+            "modified": "2023-10-02T13:12:29.228Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"request\": \"stefan\"\n}\n",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI0N2Y2OWQ0Mi1hM2M2LTQ5MGYtYTVjMi0yODlmMmIzZGViMDIiLCJzdWIiOiIyMSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTY5NjI1MTgzNywiZXhwIjoxNjk2MjUzNjM3fQ.mHua9UU7VisT3QYptAtdF5GEtDouOFpMAAcE5BTfy9g"
+            },
+            "tests": []
+        }
+    ]
+}

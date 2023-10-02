@@ -1,0 +1,109 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Comments",
+    "dateExported": "2023-10-02T13:20:10.594Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "8b73932e-4f4a-44e3-8b56-91887e56c697",
+            "colId": "48942bb1-0503-4149-af59-33ad640974a7",
+            "containerId": "",
+            "name": "All Comments",
+            "url": "http://127.0.0.1:3000/comments",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-10-02T12:15:32.001Z",
+            "modified": "2023-10-02T12:15:32.001Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJmMWIwNmE4MS0wNTJiLTQ0NjctOTZkYi1iZjI1OTU5NzVlYzQiLCJzdWIiOiIyMiIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTY5NjI0ODc2NywiZXhwIjoxNjk2MjUwNTY3fQ.xJYOhnQg6owvZR7gqAERRuAtgLMIb0jqRfC8M76IJ4U"
+            },
+            "tests": []
+        },
+        {
+            "_id": "dbe7b1de-5a7b-4eec-8c99-ea060a6166b2",
+            "colId": "48942bb1-0503-4149-af59-33ad640974a7",
+            "containerId": "",
+            "name": "Get specific comment",
+            "url": "http://127.0.0.1:3000/comments/1",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-10-02T12:17:14.937Z",
+            "modified": "2023-10-02T12:17:14.937Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJmMWIwNmE4MS0wNTJiLTQ0NjctOTZkYi1iZjI1OTU5NzVlYzQiLCJzdWIiOiIyMiIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTY5NjI0ODc2NywiZXhwIjoxNjk2MjUwNTY3fQ.xJYOhnQg6owvZR7gqAERRuAtgLMIb0jqRfC8M76IJ4U"
+            },
+            "tests": []
+        },
+        {
+            "_id": "52facb93-b246-4af8-a6d4-0d27396e0e5e",
+            "colId": "48942bb1-0503-4149-af59-33ad640974a7",
+            "containerId": "",
+            "name": "Create a comment",
+            "url": "http://127.0.0.1:3000/comments",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-10-02T12:18:26.201Z",
+            "modified": "2023-10-02T12:18:26.201Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "  {\n  \"comment\":{\n    \"content\": \"Dolorem eligendi consequatur. Est a aut. Incidunt voluptates non.\",\n    \"rating\": 1.826133500654596,\n    \"article_id\": 7\n    }\n  }",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI0N2Y2OWQ0Mi1hM2M2LTQ5MGYtYTVjMi0yODlmMmIzZGViMDIiLCJzdWIiOiIyMSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTY5NjI0OTA4MywiZXhwIjoxNjk2MjUwODgzfQ.S8fCpNzUzxCq4Xf8w0h8d6ztsDwtP8uwh5e2Qj79E0Y"
+            },
+            "tests": []
+        },
+        {
+            "_id": "00045960-9b3e-46a8-9855-2786792abf0e",
+            "colId": "48942bb1-0503-4149-af59-33ad640974a7",
+            "containerId": "",
+            "name": "Update Comment",
+            "url": "http://127.0.0.1:3000/comments/64",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2023-10-02T12:19:12.448Z",
+            "modified": "2023-10-02T12:19:12.448Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "  {\n  \"comment\": {\n    \"content\": \"Updated comment. Est a aut. Incidunt voluptates non.\",\n    \"rating\": 2,\n    \"article_id\": 7\n    }\n  }",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI0N2Y2OWQ0Mi1hM2M2LTQ5MGYtYTVjMi0yODlmMmIzZGViMDIiLCJzdWIiOiIyMSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTY5NjI0OTA4MywiZXhwIjoxNjk2MjUwODgzfQ.S8fCpNzUzxCq4Xf8w0h8d6ztsDwtP8uwh5e2Qj79E0Y"
+            },
+            "tests": []
+        },
+        {
+            "_id": "b858190e-9adb-4fb2-877a-295188a0c66a",
+            "colId": "48942bb1-0503-4149-af59-33ad640974a7",
+            "containerId": "",
+            "name": "Delete a Comment",
+            "url": "http://127.0.0.1:3000/comments/64",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2023-10-02T12:21:07.713Z",
+            "modified": "2023-10-02T12:21:07.713Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI0N2Y2OWQ0Mi1hM2M2LTQ5MGYtYTVjMi0yODlmMmIzZGViMDIiLCJzdWIiOiIyMSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTY5NjI0OTA4MywiZXhwIjoxNjk2MjUwODgzfQ.S8fCpNzUzxCq4Xf8w0h8d6ztsDwtP8uwh5e2Qj79E0Y"
+            },
+            "tests": []
+        }
+    ]
+}
