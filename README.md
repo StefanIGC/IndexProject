@@ -1,24 +1,28 @@
-# README
+# Final API Project - Index Internship
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This API is built with Ruby on Rails and is using PostgreSQL database.
+Here we have the relationship diagram of the database:
+![Alt Text](./public/QuickDBD.png)
+## Getting Started
+Follow these steps to set up and run the API:
 
-Things you may want to cover:
+1. Clone this repository to your local machine.
 
-* Ruby version
+2. In the `.env` file put all your environment variables from PostgreSQL.
 
-* System dependencies
+3. Run following commands to build and run the API:
+    
+```bash
+docker-compose build
+docker-compose up -d
+```
 
-* Configuration
+4. Run the following commands to create, migrate and seed the database:
 
-* Database creation
+```bash
+docker-compose exec app rails db:create
+docker-compose exec app rails db:migrate
+docker-compose exec app rails db:seed
+```
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+5. Open `http://localhost:3000/api-docs/index.html` in your browser to see the API Swagger documentation, or you can test the API endpoints that are available in the `Endpoints` folder.
