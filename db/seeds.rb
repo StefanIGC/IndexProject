@@ -20,7 +20,7 @@ end
 
 
 # db/seeds.rb
-20.times do
+1_000.times do
     User.create!(
       email: Faker::Internet.email,
       password: "secrete",
@@ -30,7 +30,7 @@ end
 end
   
 
-30.times do
+2_000.times do
   Article.create!(
     title: Faker::Lorem.sentence,
     description: Faker::Lorem.paragraph,
@@ -42,7 +42,7 @@ end
 end
 
 
-50.times do
+50_000.times do
   Comment.create!(
     content: Faker::Lorem.paragraph,
     rating: rand(1.0..5.0),
